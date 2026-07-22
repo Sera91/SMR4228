@@ -20,7 +20,7 @@ Leonardo supercomputer.
 |---|---|
 | [`Day-1/Tutorial/`](Day-1/Tutorial/) | Day 1 tutorials and lecture materials |
 | [`Day-1/Tutorial/EfficientUQ/`](Day-1/Tutorial/EfficientUQ/) | Materials for *Efficient and Scalable Uncertainty Quantification in SciML* |
-| [`accessing_Leonardo/`](accessing_Leonardo/) | Instructions for accessing and configuring Leonardo |
+| [`accessing_Leonardo/`](accessing_Leonardo/) | Instructions for accessing the HPC cluster Leonardo at CINECA|
 | [`testing-Jupyter/`](testing-Jupyter/) | Conda setup, Jupyter launch scripts, and environment tests |
 
 ## Lecturers
