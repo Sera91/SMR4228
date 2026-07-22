@@ -12,6 +12,17 @@ Trieste, Italy, from **23 to 31 July 2026**.
 This repository contains lecture materials, hands-on tutorials, notebooks,
 and technical instructions for running machine-learning workflows on the
 Leonardo supercomputer.
+
+
+## Repository Structure
+
+| Path | Description |
+|---|---|
+| [`Day-1/Tutorial/`](Day-1/Tutorial/) | Day 1 tutorials and lecture materials |
+| [`Day-1/Tutorial/EfficientUQ/`](Day-1/Tutorial/EfficientUQ/) | Materials for *Efficient and Scalable Uncertainty Quantification in SciML* |
+| [`accessing_Leonardo/`](accessing_Leonardo/) | Instructions for accessing and configuring Leonardo |
+| [`testing-Jupyter/`](testing-Jupyter/) | Conda setup, Jupyter launch scripts, and environment tests |
+
 ## Lecturers
 
   - J. Carnerero Cano, IBM Research, Ireland
