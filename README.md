@@ -1,7 +1,17 @@
-# SMR4228
-This is the official repo for the Advanced School in Applied Machine Learning: Uncertainty and Robustness of DL Models for Science  (smr 4228) 
 
 
+# Advanced School in Applied Machine Learning
+## Uncertainty and Robustness of Deep Learning Models for Science
+
+Official teaching-material repository for **SMR 4228**, held at the
+Abdus Salam International Centre for Theoretical Physics (ICTP) in
+Trieste, Italy, from **23 to 31 July 2026**.
+
+[Official event page](https://indico.ictp.it/event/11154)
+
+This repository contains lecture materials, hands-on tutorials, notebooks,
+and technical instructions for running machine-learning workflows on the
+Leonardo supercomputer.
 ## Lecturers
 
   - J. Carnerero Cano, IBM Research, Ireland
