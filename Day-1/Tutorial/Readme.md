@@ -1,1 +1,1 @@
-Example
+- **EfficientUQ**: Material for the lecture *Efficient and Scalable Uncertainty Quantification in SciML* by Dario Coscia.
