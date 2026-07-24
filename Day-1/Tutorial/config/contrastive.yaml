@@ -1,0 +1,51 @@
+# Configuration for the AION image <-> spectrum contrastive alignment tutorial.
+# Launch with:  python main.py fit -c config/contrastive.yaml
+
+seed_everything: 42
+
+model:
+  embed_dim: 768        # AION-base token dimension
+  num_heads: 12         # head_dim 64, as in V-JEPA2
+  num_queries: 8        # learned queries per modality
+  depth: 1              # V-JEPA2 probes go up to 4 (adds self-attn blocks over tokens)
+  # Optimization recipe from the V-JEPA2 attentive-probe evals: AdamW with
+  # *small* weight decay, linear warmup from a low start LR, cosine to 0.
+  lr: 5.0e-4
+  start_lr: 2.0e-4
+  warmup_epochs: 1
+  weight_decay: 2.0e-3
+  init_temperature: 0.07
+
+data:
+  # HuggingFace Hub dataset id; a local directory of parquet shards also
+  # works (e.g. to skip the download on a machine that already has the data).
+  dataset: EiffL/desi_x_ls_aion
+  batch_size: 512       # contrastive losses like large batches
+  num_workers: 16       # the per-row Arrow->torch decode is CPU-bound: scale with cores
+  val_fraction: 0.02    # row-level split, fixed seed: identical everywhere
+
+trainer:
+  accelerator: auto
+  devices: 1
+  precision: 16-mixed   # the embeddings are stored in float16 anyway
+  max_epochs: 10
+  log_every_n_steps: 10
+  logger:
+    class_path: lightning.pytorch.loggers.WandbLogger
+    init_args:
+      project: aion-contrastive
+      save_dir: wandb_logs
+      # Upload every checkpoint to wandb as a model artifact during training
+      # (the best one gets the "best" alias). This is what lets the evaluation
+      # notebook run anywhere: it downloads the model from the run reference.
+      log_model: all
+  callbacks:
+    - class_path: lightning.pytorch.callbacks.ModelCheckpoint
+      init_args:
+        monitor: val/loss
+        mode: min
+        save_top_k: 1
+        filename: "best-{epoch}-{step}"
+    - class_path: lightning.pytorch.callbacks.LearningRateMonitor
+      init_args:
+        logging_interval: epoch
