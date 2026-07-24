@@ -100,5 +100,5 @@ Once the run is done, you can upload the weights like so:
 
 ```bash
 # from a Leonardo login node (has internet)
-wandb sync $SCRATCH/wandb_logs/wandb/offline-run-*
+wandb sync --legacy $SCRATCH/wandb_logs/wandb/offline-run-*
 ```
