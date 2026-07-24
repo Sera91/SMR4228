@@ -39,11 +39,12 @@ codebase: a `LightningDataModule`, a `LightningModule`, a YAML config, and a
 Once you are logged in on Leonardo, you can run the following commands to prepare
 the project:
 ```bash
-git clone https://github.com/EiffL/Tutorials.git
+git clone https://github.com/Sera91/SMR4228.git
+cd SMR4228/Day-1/Tutorial
+
 module load python
-cd Tutorials/FoundationModels/AION
 python -m venv --system-site-packages .venv
-.venv/bin/activate
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
