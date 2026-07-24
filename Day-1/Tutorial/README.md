@@ -21,12 +21,6 @@ physical structure (redshift, stellar populations) emerges without ever being su
 encoder, keep the foundation model frozen and train a lightweight attentive probe
 (a V-JEPA 2-style cross-attention pooler, ~10M parameters) on top of its embeddings —
 the standard, compute-efficient way to specialize a foundation model.
-- **Probabilistic Inference from Foundation Model Outputs**: Use frozen embeddings as
-learned summary statistics for estimating galaxy properties (redshift, stellar mass)
-with a simple k-NN regressor, and learn to judge predictions by their full error
-distribution — typical precision vs. catastrophic outliers — rather than a single
-squared-error score like $R^2$.
-
 
 It is also a compact, idiomatic example of a
 [PyTorch Lightning](https://lightning.ai/docs/pytorch/stable/) (2.6+)
