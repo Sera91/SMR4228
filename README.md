@@ -30,10 +30,12 @@ Leonardo supercomputer.
   - C. De Nobili, Critiqality, Italy              
   - J. Gonzalez Abad, Instituto de Física de Cantabria (IFCA), Spain
   - Eiman Kanjo, NTU
+  - V. Janapa-Reddi, Harvard University
   - K. Karchev, University of Barcelona, Spain
   - F. Lanusse, CNRS, France
   - P. Mukhopadhyay, Cambridge, UK
   - M. E. Olmo, Barcelona Supercomputing Center, Spain
+  - G. Rozza, SISSA, Italy
   - A. J. Scaffidi, SISSA, Italy
   - J. S. Shawe-Taylor, University College London, UK
   - H. Strobelt, IBM Research, USA
