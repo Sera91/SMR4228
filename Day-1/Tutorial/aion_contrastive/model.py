@@ -117,7 +117,9 @@ class ContrastiveAlignment(LightningModule):
     def training_step(self, batch, batch_idx):
         z_image, z_spectrum = self(batch)
         scale = self.log_scale.clamp(max=math.log(100.0)).exp()
-        loss = clip_loss(z_image, z_spectrum, scale)
+
+        # Todo: complete the following line:
+        loss = clip_loss(..., ..., scale)
 
         self.log("train/loss", loss, prog_bar=True)
         self.log("train/temperature", 1.0 / scale)
