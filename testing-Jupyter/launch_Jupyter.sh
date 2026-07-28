@@ -50,7 +50,7 @@ echo -e "
 #       Check jupyter_notebook_%j.err to find the port.
 
 # Command to create SSH tunnel:
-ssh -N -f -L $portval:${node}:$portval ${user}@$login.leonardo.cineca.it
+ssh -N -f -L $portval:${node}:$portval ${user}$login.leonardo.cineca.it
 # Use a browser on your local machine to go to:
 http://localhost:$portval/
 "
