@@ -38,9 +38,7 @@ node=$(hostname -s)
 user=$(whoami)
 portval=88$(whoami | cut -b 7-9)
 
-#portval=88$(whoami | cut -b 7)0
-#portval=`expr $portval + 50`
-#portval=`expr $portval + 17`
+#portval=8800
 
 
 # print tunneling instructions jupyter-log
