@@ -25,7 +25,7 @@ export MERLIN_PATH="$HOME/merlin/build/merlin"
 export OLLAMA_MODELS="$SCRATCH/ollama-models"
 export OLLAMA_HOST="127.0.0.1:11434"
 
-export LD_LIBRARY_PATH="$HOME/.local/boost-1.80.0/lib:$HOME/.local/ollama/lib/ollama:${LD_LIBRARY_PATH:-}"
+export LD_LIBRARY_PATH="$HOME/.local/boost-1.80.0/lib:$SCRATCH/.local/ollama/lib/ollama:${LD_LIBRARY_PATH:-}"
 
 source "$HOME/.venvs/fact-reasoner/bin/activate"
 
