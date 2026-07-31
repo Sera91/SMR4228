@@ -19,7 +19,7 @@ cd $HOME
 
 module load gcc/11.3.0
 
-export PATH="$HOME/.venvs/fact-reasoner/bin:$HOME/.local/ollama/bin:$PATH"
+export PATH="$HOME/.venvs/fact-reasoner/bin:$SCRATCH/.local/ollama/bin:$PATH"
 
 export MERLIN_PATH="$HOME/merlin/build/merlin"
 export OLLAMA_MODELS="$SCRATCH/ollama-models"
