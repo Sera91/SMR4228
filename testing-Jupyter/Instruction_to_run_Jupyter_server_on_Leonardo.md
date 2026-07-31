@@ -79,5 +79,8 @@ If you are a windows user you can type the following command
 
 taskkill /pid PID /f
 
+Before reconnecting is better also that you clean the known hosts file:
+$ssh-keygen -f '$HOME/.ssh/known_hosts' -R 'login.leonardo.cineca.it'
+
 
 
